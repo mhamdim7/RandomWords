@@ -1,7 +1,9 @@
 package com.sameh.randomwords.ui.components
 
+import android.util.Log
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -46,6 +48,10 @@ fun TextItem(itemText: String) {
             .fillMaxWidth()
             .padding(16.dp)
             .background(MaterialTheme.colors.background)
+            .clickable {
+                // Log text when clicked
+                Log.d("TextItem", "Bryj: $itemText")
+            }
     )
 }
 
